@@ -1,0 +1,64 @@
+export const projectCategories = [
+  { id: 'all', label: 'Todos' },
+  { id: 'web', label: 'Sites' },
+  { id: 'app', label: 'Aplicações' },
+]
+
+export const projects = [
+  {
+    id: 'fintrack',
+    title: 'FinTrack',
+    type: 'Dashboard financeiro',
+    description:
+      'Painel para acompanhar receitas, despesas e metas com uma visão clara da saúde financeira.',
+    category: 'app',
+    year: '2026',
+    tags: ['JavaScript', 'CSS', 'Vite'],
+    visual: 'finance',
+    featured: true,
+    demoUrl: '',
+    repositoryUrl: '',
+  },
+  {
+    id: 'norte',
+    title: 'Studio Norte',
+    type: 'Site institucional',
+    description:
+      'Presença digital editorial para um estúdio criativo, com navegação objetiva e identidade marcante.',
+    category: 'web',
+    year: '2026',
+    tags: ['HTML', 'CSS', 'Motion'],
+    visual: 'studio',
+    featured: true,
+    demoUrl: '',
+    repositoryUrl: '',
+  },
+  {
+    id: 'taskly',
+    title: 'Taskly',
+    type: 'Aplicação de produtividade',
+    description:
+      'Organizador de tarefas que reduz distrações e deixa prioridades e andamento sempre visíveis.',
+    category: 'app',
+    year: '2026',
+    tags: ['JavaScript', 'API', 'UX'],
+    visual: 'task',
+    featured: false,
+    demoUrl: '',
+    repositoryUrl: '',
+  },
+  {
+    id: 'lumina',
+    title: 'Lumina',
+    type: 'Landing page de produto',
+    description:
+      'Página de lançamento rápida e responsiva, construída para comunicar valor e converter visitas.',
+    category: 'web',
+    year: '2026',
+    tags: ['Vite', 'Acessibilidade', 'SEO'],
+    visual: 'product',
+    featured: false,
+    demoUrl: '',
+    repositoryUrl: '',
+  },
+]
