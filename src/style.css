@@ -154,15 +154,15 @@ img { display: block; max-width: 100%; }
 
 .hero::before {
   z-index: -2;
-  background: url('/og.png') center / cover no-repeat;
-  opacity: .5;
+  background: url('/images/hero-tech.png') center / cover no-repeat;
+  opacity: .78;
 }
 
 .hero::after {
   z-index: -1;
   background:
-    linear-gradient(90deg, rgb(8 10 9 / 98%) 0%, rgb(8 10 9 / 91%) 48%, rgb(8 10 9 / 64%) 100%),
-    linear-gradient(180deg, transparent 45%, rgb(8 10 9 / 92%) 100%);
+    linear-gradient(90deg, rgb(8 10 9 / 97%) 0%, rgb(8 10 9 / 78%) 48%, rgb(8 10 9 / 52%) 100%),
+    linear-gradient(180deg, rgb(8 10 9 / 18%) 42%, rgb(8 10 9 / 88%) 100%);
 }
 
 .hero__content {
@@ -698,8 +698,8 @@ img { display: block; max-width: 100%; }
   .site-nav a:first-child { border-top: 1px solid var(--line); }
   .site-nav.is-open { visibility: visible; opacity: 1; transform: none; }
   .hero { width: 100%; min-height: auto; padding: 42px 14px 52px; border-inline: 0; border-radius: 0 0 20px 20px; }
-  .hero::before { background-position: 62% top; opacity: .18; }
-  .hero::after { background: linear-gradient(180deg, rgb(8 10 9 / 88%), rgb(8 10 9 / 98%) 68%); }
+  .hero::before { background-position: 58% top; opacity: .46; }
+  .hero::after { background: linear-gradient(180deg, rgb(8 10 9 / 88%) 0%, rgb(8 10 9 / 73%) 35%, rgb(8 10 9 / 96%) 72%); }
   .hero h1 { font-size: clamp(2.65rem, 13vw, 3.35rem); }
   .hero__actions { align-items: flex-start; flex-direction: column; gap: 20px; }
   .hero__portrait { width: min(88vw, 360px); }
