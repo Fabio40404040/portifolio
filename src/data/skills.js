@@ -1,6 +1,7 @@
 export const skills = [
-  { group: 'Base', items: ['HTML semântico', 'CSS moderno', 'JavaScript ES6+'] },
-  { group: 'Ferramentas', items: ['Vite', 'Git & GitHub', 'APIs REST'] },
+  { group: 'Front-end', items: ['HTML semântico', 'CSS moderno', 'JavaScript ES6+'] },
+  { group: 'Back-end', items: ['Node.js', 'APIs REST', 'Banco de dados'] },
+  { group: 'Ferramentas', items: ['Vite', 'Git & GitHub', 'Integrações'] },
   { group: 'Qualidade', items: ['Responsividade', 'Acessibilidade', 'Performance'] },
 ]
 

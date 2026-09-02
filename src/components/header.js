@@ -18,6 +18,7 @@ export function header() {
         <a href="#projetos">Projetos</a>
         <a href="#skills">Skills</a>
         <a href="#processo">Works</a>
+        <a href="#contato">Contato</a>
       </nav>
     </header>
   `

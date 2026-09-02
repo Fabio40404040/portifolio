@@ -16,7 +16,6 @@ export function renderHomePage(root) {
         <div class="hero__content">
           <p class="eyebrow"><span></span>${profile.availability}</p>
           <h1>${profile.headline}</h1>
-          <p class="hero__intro">${profile.introduction}</p>
 
           <div class="hero__actions">
             <a class="button button--primary" href="#projetos">Ver projetos <span aria-hidden="true">↘</span></a>
@@ -24,23 +23,22 @@ export function renderHomePage(root) {
           </div>
         </div>
 
-        <aside class="hero__visual" aria-label="Resumo profissional">
-          <div class="code-window">
-            <div class="code-window__top" aria-hidden="true">
-              <span></span><span></span><span></span>
-              <p>portfolio.js</p>
-            </div>
-            <pre><code><span class="code-muted">01</span> const <span class="code-accent">developer</span> = {
-<span class="code-muted">02</span>   foco: <span class="code-string">'experiência'</span>,
-<span class="code-muted">03</span>   stack: [<span class="code-string">'JS'</span>, <span class="code-string">'CSS'</span>, <span class="code-string">'Vite'</span>],
-<span class="code-muted">04</span>   entrega: <span class="code-string">'valor real'</span>
-<span class="code-muted">05</span> }</code></pre>
+        <figure class="hero__portrait">
+          <div class="portrait-frame">
+            ${
+              profile.photo
+                ? `<img src="${profile.photo}" alt="${profile.photoAlt}" fetchpriority="high">`
+                : `<div class="portrait-placeholder" role="img" aria-label="Espaço reservado para a foto de ${profile.name}">
+                    <strong>${profile.initials}</strong>
+                    <span>Adicione sua foto</span>
+                  </div>`
+            }
           </div>
-          <div class="orbit orbit--one"></div>
-          <div class="orbit orbit--two"></div>
-          <span class="visual-tag visual-tag--top">clean code</span>
-          <span class="visual-tag visual-tag--bottom">design + função</span>
-        </aside>
+          <figcaption>
+            <span>${profile.role}</span>
+            <span>${profile.location}</span>
+          </figcaption>
+        </figure>
       </section>
 
       <section class="project-section section" id="projetos">

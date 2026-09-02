@@ -1,12 +1,12 @@
 export const profile = {
   name: 'Fabio',
   initials: 'FS',
-  role: 'Desenvolvedor Front-end',
-  headline: 'Eu transformo ideias em experiências digitais que fazem sentido.',
-  introduction:
-    'Crio interfaces rápidas, responsivas e intuitivas com JavaScript, CSS e a simplicidade do Vite.',
+  role: 'Desenvolvedor Full Stack',
+  headline: 'Desenvolvo soluções completas, do front-end ao back-end.',
   availability: 'Disponível para novos projetos',
   location: 'Brasil',
+  photo: '',
+  photoAlt: 'Foto de Fabio, desenvolvedor Full Stack',
   about:
     'Sou um desenvolvedor focado em criar produtos digitais que unem clareza, desempenho e uma boa experiência para quem usa. Gosto de transformar problemas complexos em interfaces simples, acessíveis e fáceis de manter.',
   principles: ['Código organizado', 'Design responsivo', 'Foco no usuário'],
