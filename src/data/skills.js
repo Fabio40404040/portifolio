@@ -2,7 +2,7 @@ export const skills = [
   { group: 'Front-end', items: ['HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'React'] },
   { group: 'Back-end', items: ['Node.js', 'Express.js', 'REST API'] },
   { group: 'Banco de dados', items: ['PostgreSQL', 'Prisma'] },
-  { group: 'Inteligência Artificial', items: ['IA'] },
+  { group: 'Inteligência Artificial', items: ['Integração com IA'] },
   { group: 'Versionamento', items: ['Git', 'GitHub'] },
 ]
 
@@ -17,7 +17,7 @@ const skillIcons = {
   'REST API': '/icons/skills/openapiinitiative.svg',
   PostgreSQL: '/icons/skills/postgresql.svg',
   Prisma: '/icons/skills/prisma.svg',
-  IA: '/icons/skills/ai.svg',
+  'Integração com IA': '/icons/skills/ai.svg',
   Git: '/icons/skills/git.svg',
   GitHub: '/icons/skills/github.svg',
 }
