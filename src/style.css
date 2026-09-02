@@ -588,13 +588,35 @@ img { display: block; max-width: 100%; }
 .process-card p { max-width: 300px; margin: 0; color: #656a62; line-height: 1.65; }
 
 .contact-section { padding-top: 96px; padding-bottom: 96px; }
-.contact-card { position: relative; overflow: hidden; padding: 84px; border-radius: 24px; color: var(--accent-ink); background: var(--accent); }
+.contact-card { position: relative; overflow: hidden; padding: 72px; display: grid; grid-template-columns: .82fr 1.18fr; gap: 64px; align-items: start; border-radius: 24px; color: var(--accent-ink); background: var(--accent); }
 .contact-card::after { content: ''; position: absolute; width: 430px; aspect-ratio: 1; top: -120px; right: -100px; border: 1px solid rgb(16 20 8 / 24%); border-radius: 50%; box-shadow: 0 0 0 55px rgb(16 20 8 / 4%), 0 0 0 110px rgb(16 20 8 / 4%); pointer-events: none; }
+.contact-card__intro { position: relative; z-index: 1; }
 .contact-card .section-kicker { color: #485918; }
 .contact-card h2 { position: relative; z-index: 1; font-size: clamp(3.1rem, 6vw, 6.3rem); }
-.contact-card > p:not(.section-kicker) { max-width: 610px; margin: 28px 0 36px; color: #44501e; font-size: 1.05rem; line-height: 1.65; }
+.contact-card__intro > p:not(.section-kicker) { max-width: 540px; margin: 28px 0 32px; color: #44501e; font-size: 1.05rem; line-height: 1.65; }
 .button--dark { position: relative; z-index: 1; color: var(--text); background: var(--accent-ink); }
-.contact-email { margin-left: 18px; color: #4d5b22; font: .75rem var(--font-mono); }
+.contact-email { color: #4d5b22; font: .75rem var(--font-mono); }
+
+.contact-form { position: relative; z-index: 1; padding: 28px; border: 1px solid #30372f; border-radius: 18px; color: var(--text); background: rgb(11 13 12 / 96%); box-shadow: 0 24px 55px rgb(34 45 10 / 18%); }
+.contact-form__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.contact-field { display: grid; gap: 9px; }
+.contact-field--full { grid-column: 1 / -1; }
+.contact-field > span { color: #cbd0cc; font: .7rem var(--font-mono); letter-spacing: .04em; text-transform: uppercase; }
+.contact-field input,
+.contact-field select,
+.contact-field textarea { width: 100%; border: 1px solid #343b36; border-radius: 9px; outline: 0; color: var(--text); background: #151916; font: inherit; transition: border-color 180ms ease, box-shadow 180ms ease; }
+.contact-field input,
+.contact-field select { min-height: 48px; padding: 0 13px; }
+.contact-field textarea { min-height: 128px; padding: 13px; resize: vertical; line-height: 1.5; }
+.contact-field input::placeholder,
+.contact-field textarea::placeholder { color: #6f7771; }
+.contact-field input:focus,
+.contact-field select:focus,
+.contact-field textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgb(199 255 69 / 12%); }
+.contact-form__actions { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 11px; }
+.contact-form .button { min-height: 48px; border: 0; cursor: pointer; }
+.button--whatsapp { color: #07170d; background: #42dc72; }
+.contact-form__note { margin: 14px 0 0; color: #7d857f; font-size: .72rem; }
 
 .site-footer {
   width: var(--page);
@@ -624,7 +646,7 @@ img { display: block; max-width: 100%; }
   .about-intro { grid-template-columns: 1fr; gap: 10px; margin-bottom: 72px; }
   .about-grid { grid-template-columns: 1fr; gap: 50px; }
   .process-card { padding-inline: 22px; }
-  .contact-card { padding: 62px 48px; }
+  .contact-card { padding: 62px 48px; grid-template-columns: 1fr; gap: 48px; }
   .site-footer { grid-template-columns: 1fr 1fr; }
   .site-footer > p { display: none; }
 }
@@ -664,7 +686,11 @@ img { display: block; max-width: 100%; }
   .contact-section { padding-block: 54px; }
   .contact-card { padding: 52px 24px; border-radius: 17px; }
   .contact-card h2 { font-size: 3.15rem; }
-  .contact-email { display: block; margin: 18px 0 0; }
+  .contact-form { padding: 22px 18px; }
+  .contact-form__grid { grid-template-columns: 1fr; }
+  .contact-field--full { grid-column: auto; }
+  .contact-form__actions { flex-direction: column; }
+  .contact-form .button { width: 100%; }
   .site-footer { min-height: 150px; grid-template-columns: 1fr auto; }
 }
 

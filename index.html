@@ -110,11 +110,49 @@
 
       <section class="contact-section section" id="contato">
         <div class="contact-card" data-reveal>
-          <p class="section-kicker">Tem um projeto em mente?</p>
-          <h2>Vamos tirar essa ideia<br>do papel.</h2>
-          <p>Conte um pouco sobre o desafio. Eu respondo com os próximos passos para transformá-lo em uma experiência digital.</p>
-          <a class="button button--dark" data-contact-link>Enviar uma mensagem <span aria-hidden="true">↗</span></a>
-          <span class="contact-email" data-contact-email></span>
+          <div class="contact-card__intro">
+            <p class="section-kicker">Tem um projeto em mente?</p>
+            <h2>Vamos tirar essa ideia<br>do papel.</h2>
+            <p>Conte um pouco sobre o desafio. Eu respondo com os próximos passos para transformar sua ideia em uma experiência digital.</p>
+            <span class="contact-email" data-contact-email></span>
+          </div>
+
+          <form class="contact-form" data-contact-form>
+            <div class="contact-form__grid">
+              <label class="contact-field">
+                <span>Seu nome</span>
+                <input type="text" name="name" autocomplete="name" placeholder="Como posso chamar você?" required>
+              </label>
+
+              <label class="contact-field">
+                <span>Seu e-mail</span>
+                <input type="email" name="email" autocomplete="email" placeholder="voce@exemplo.com" required>
+              </label>
+
+              <label class="contact-field contact-field--full">
+                <span>Tipo de projeto</span>
+                <select name="projectType" required>
+                  <option value="" selected disabled>Selecione uma opção</option>
+                  <option>Site institucional</option>
+                  <option>Landing page</option>
+                  <option>Aplicação web</option>
+                  <option>Manutenção ou melhoria</option>
+                  <option>Outro projeto</option>
+                </select>
+              </label>
+
+              <label class="contact-field contact-field--full">
+                <span>Conte sobre sua ideia</span>
+                <textarea name="message" rows="5" placeholder="Objetivo, prazo e o que você precisa desenvolver..." required></textarea>
+              </label>
+            </div>
+
+            <div class="contact-form__actions">
+              <button class="button button--dark" type="submit">Enviar pelo Gmail <span aria-hidden="true">↗</span></button>
+              <button class="button button--whatsapp" type="button" data-whatsapp-submit>Enviar pelo WhatsApp <span aria-hidden="true">↗</span></button>
+            </div>
+            <p class="contact-form__note">Você revisa a mensagem antes de enviar.</p>
+          </form>
         </div>
       </section>
     </main>

@@ -1,3 +1,34 @@
+import { siteConfig } from './config/site.js'
+
+function getContactMessage(form) {
+  const formData = new FormData(form)
+
+  return [
+    `Olá, Fabio! Meu nome é ${formData.get('name')}.`,
+    `E-mail: ${formData.get('email')}`,
+    `Tipo de projeto: ${formData.get('projectType')}`,
+    '',
+    String(formData.get('message')),
+  ].join('\n')
+}
+
+function openContactChannel(form, channel) {
+  if (!form.reportValidity()) return
+
+  const message = getContactMessage(form)
+  const url = channel === 'whatsapp'
+    ? `https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(message)}`
+    : `https://mail.google.com/mail/?${new URLSearchParams({
+        view: 'cm',
+        fs: '1',
+        to: siteConfig.email,
+        su: 'Contato pelo portfólio',
+        body: message,
+      })}`
+
+  window.open(url, '_blank', 'noopener,noreferrer')
+}
+
 export function setupPortfolioInteractions() {
   const menuButton = document.querySelector('[data-menu-button]')
   const menu = document.querySelector('[data-menu]')
@@ -28,6 +59,18 @@ export function setupPortfolioInteractions() {
 
   window.addEventListener('resize', () => {
     if (window.innerWidth > 620) closeMenu()
+  })
+
+  const contactForm = document.querySelector('[data-contact-form]')
+  const whatsappButton = document.querySelector('[data-whatsapp-submit]')
+
+  contactForm?.addEventListener('submit', (event) => {
+    event.preventDefault()
+    openContactChannel(contactForm, 'gmail')
+  })
+
+  whatsappButton?.addEventListener('click', () => {
+    openContactChannel(contactForm, 'whatsapp')
   })
 
   const filters = document.querySelectorAll('[data-filter]')

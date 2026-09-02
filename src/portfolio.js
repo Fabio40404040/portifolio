@@ -103,17 +103,6 @@ function renderWorkSteps() {
 }
 
 function renderContact() {
-  const contactLink = root.querySelector('[data-contact-link]')
-  const gmailParams = new URLSearchParams({
-    view: 'cm',
-    fs: '1',
-    to: siteConfig.email,
-    su: 'Contato pelo portfólio',
-  })
-
-  contactLink.href = `https://mail.google.com/mail/?${gmailParams}`
-  contactLink.target = '_blank'
-  contactLink.rel = 'noopener noreferrer'
   root.querySelector('[data-contact-email]').textContent = siteConfig.email
   root.querySelector('[data-social="linkedin"]').href = siteConfig.linkedin
   root.querySelector('[data-social="github"]').href = siteConfig.github
