@@ -84,6 +84,8 @@ img { display: block; max-width: 100%; }
   font-weight: 700;
 }
 
+.brand > [data-profile='name'] { color: var(--accent); }
+
 .brand__mark {
   display: grid;
   width: 34px;
@@ -196,11 +198,28 @@ img { display: block; max-width: 100%; }
 .hero h1 {
   max-width: 720px;
   margin: 0;
-  font-size: clamp(3.4rem, 5.8vw, 6rem);
+  display: grid;
+  gap: 8px;
+  font-size: clamp(3.4rem, 5.2vw, 5.4rem);
   font-weight: 650;
   letter-spacing: -.065em;
-  line-height: .92;
+  line-height: .94;
 }
+
+.hero__name {
+  color: var(--accent);
+  font-size: .72em;
+  letter-spacing: -.045em;
+}
+
+.hero__role {
+  display: block;
+  font-size: .82em;
+  letter-spacing: -.052em;
+  line-height: 1;
+}
+
+.hero__role-focus { white-space: nowrap; }
 
 .hero__tagline {
   margin: 24px 0 0;
@@ -700,7 +719,10 @@ img { display: block; max-width: 100%; }
   .hero { width: 100%; min-height: auto; padding: 42px 14px 52px; border-inline: 0; border-radius: 0 0 20px 20px; }
   .hero::before { background-position: 58% top; opacity: .46; }
   .hero::after { background: linear-gradient(180deg, rgb(8 10 9 / 88%) 0%, rgb(8 10 9 / 73%) 35%, rgb(8 10 9 / 96%) 72%); }
-  .hero h1 { font-size: clamp(2.65rem, 13vw, 3.35rem); }
+  .hero h1 { gap: 7px; font-size: clamp(2.7rem, 12.5vw, 3.35rem); }
+  .hero__name { font-size: .68em; }
+  .hero__role { font-size: .78em; line-height: 1.04; }
+  .hero__role-focus { display: block; }
   .hero__actions { align-items: flex-start; flex-direction: column; gap: 20px; }
   .hero__portrait { width: min(88vw, 360px); }
   .section { padding-block: 78px; }

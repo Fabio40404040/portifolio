@@ -4,7 +4,7 @@ function getContactMessage(form) {
   const formData = new FormData(form)
 
   return [
-    `Olá, Fabio! Meu nome é ${formData.get('name')}.`,
+    `Olá, Fábio! Meu nome é ${formData.get('name')}.`,
     `E-mail: ${formData.get('email')}`,
     `Tipo de projeto: ${formData.get('projectType')}`,
     '',
