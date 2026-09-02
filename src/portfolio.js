@@ -98,9 +98,11 @@ function renderHeroSkills() {
     group.className = 'hero-skills__group'
     if (copy === 1) group.setAttribute('aria-hidden', 'true')
 
-    heroSkills.forEach((skill) => {
+    heroSkills.forEach(({ label, icon }) => {
       const fragment = template.content.cloneNode(true)
-      fragment.querySelector('[data-hero-skill]').textContent = skill
+      const image = fragment.querySelector('[data-hero-skill-icon]')
+      image.src = icon
+      fragment.querySelector('[data-hero-skill]').textContent = label
       group.append(fragment)
     })
 

@@ -5,7 +5,24 @@ export const skills = [
   { group: 'Versionamento', items: ['Git', 'GitHub'] },
 ]
 
-export const heroSkills = skills.flatMap(({ items }) => items)
+const skillIcons = {
+  HTML5: '/icons/skills/html5.svg',
+  CSS3: '/icons/skills/css.svg',
+  JavaScript: '/icons/skills/javascript.svg',
+  TypeScript: '/icons/skills/typescript.svg',
+  React: '/icons/skills/react.svg',
+  'Node.js': '/icons/skills/nodedotjs.svg',
+  'Express.js': '/icons/skills/express.svg',
+  'REST API': '/icons/skills/openapiinitiative.svg',
+  PostgreSQL: '/icons/skills/postgresql.svg',
+  Prisma: '/icons/skills/prisma.svg',
+  Git: '/icons/skills/git.svg',
+  GitHub: '/icons/skills/github.svg',
+}
+
+export const heroSkills = skills
+  .flatMap(({ items }) => items)
+  .map((label) => ({ label, icon: skillIcons[label] }))
 
 export const workSteps = [
   {

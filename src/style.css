@@ -370,12 +370,11 @@ img { display: block; max-width: 100%; }
   white-space: nowrap;
 }
 
-.hero-skills__item i {
-  width: 6px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 12px rgb(199 255 69 / 52%);
+.hero-skills__item img {
+  width: 21px;
+  height: 21px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgb(199 255 69 / 24%));
 }
 
 @keyframes hero-skills-scroll {
