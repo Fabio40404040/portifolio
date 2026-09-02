@@ -34,6 +34,7 @@
 }
 
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html { scroll-behavior: smooth; }
 
 ::selection { color: var(--accent-ink); background: var(--accent); }
@@ -419,6 +420,18 @@ img { display: block; max-width: 100%; }
 .project-card:nth-child(2) .project-card__visual { background: #c8fa49; }
 .project-card:nth-child(3) .project-card__visual { background: #171a24; }
 .project-card:nth-child(4) .project-card__visual { background: #e8e9df; }
+
+.project-preview {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.project-preview > .preview-shell { display: none; }
+.project-preview[data-visual='finance'] .preview-shell--finance { display: grid; }
+.project-preview[data-visual='studio'] .preview-shell--studio { display: block; }
+.project-preview[data-visual='task'] .preview-shell--task { display: grid; }
+.project-preview[data-visual='product'] .preview-shell--product { display: block; }
 
 .project-card__image {
   width: 100%;
