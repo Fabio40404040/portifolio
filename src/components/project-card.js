@@ -28,7 +28,11 @@ export function projectCard(project) {
 
   return `
     <article class="project-card" data-project data-category="${project.category}">
-      ${projectVisual(project.visual, project.title)}
+      ${
+        project.image
+          ? `<div class="project-card__visual"><img class="project-card__image" src="${project.image}" alt="${project.imageAlt || `Tela do projeto ${project.title}`}" loading="lazy"></div>`
+          : projectVisual(project.visual, project.title)
+      }
       <div class="project-card__content">
         <div>
           <p class="project-card__meta">${project.type} · ${project.year}</p>
