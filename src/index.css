@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Ubuntu Sans';
-  src: url('../assets/fonts/UbuntuSans.ttf') format('truetype');
+  src: url('./assets/fonts/UbuntuSans.ttf') format('truetype');
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: 'Ubuntu Mono';
-  src: url('../assets/fonts/UbuntuMono.ttf') format('truetype');
+  src: url('./assets/fonts/UbuntuMono.ttf') format('truetype');
   font-style: normal;
   font-weight: 100 700;
   font-display: swap;

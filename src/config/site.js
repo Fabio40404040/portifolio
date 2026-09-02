@@ -1,5 +1,5 @@
 export const siteConfig = {
-  email: 'seuemail@exemplo.com',
+  email: 'fabiogisel7@gmail.com',
   linkedin: 'https://www.linkedin.com/',
   github: 'https://github.com/',
   cvPath: '',
