@@ -13,10 +13,11 @@ export function header() {
       </button>
 
       <nav class="site-nav" aria-label="Navegação principal" data-menu>
-        <a href="#projetos">Projetos</a>
+        <a href="#inicio">Home</a>
         <a href="#sobre">Sobre</a>
-        <a href="#processo">Processo</a>
-        <a class="nav-cta" href="#contato">Vamos conversar</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#skills">Skills</a>
+        <a href="#processo">Works</a>
       </nav>
     </header>
   `

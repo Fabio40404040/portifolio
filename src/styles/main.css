@@ -55,6 +55,9 @@ img { display: block; max-width: 100%; }
 }
 
 .site-header {
+  position: sticky;
+  z-index: 100;
+  top: 0;
   width: var(--page);
   height: 92px;
   margin: 0 auto;
@@ -63,6 +66,8 @@ img { display: block; max-width: 100%; }
   justify-content: space-between;
   border-bottom: 1px solid var(--line);
   background: rgb(11 13 12 / 86%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
 .brand {
@@ -100,6 +105,14 @@ img { display: block; max-width: 100%; }
   border: 1px solid var(--line);
   border-radius: 999px;
   color: var(--text);
+}
+
+#inicio,
+#sobre,
+#projetos,
+#skills,
+#processo {
+  scroll-margin-top: 110px;
 }
 
 .menu-button { display: none; }
@@ -512,7 +525,6 @@ img { display: block; max-width: 100%; }
   .menu-button[aria-expanded='true'] span:last-child { transform: translateY(-3.5px) rotate(-45deg); }
   .site-nav { position: fixed; z-index: 10; inset: 0; padding: 112px 28px 40px; display: flex; align-items: flex-start; flex-direction: column; gap: 26px; visibility: hidden; opacity: 0; color: var(--text); background: rgb(11 13 12 / 98%); font-size: 1.8rem; transition: opacity 180ms ease, visibility 180ms ease; }
   .site-nav.is-open { visibility: visible; opacity: 1; }
-  .site-nav .nav-cta { margin-top: 12px; padding: 13px 18px; font-size: 1rem; }
   .hero { min-height: auto; padding: 64px 0 52px; }
   .hero h1 { font-size: clamp(3rem, 15.5vw, 4.6rem); }
   .hero__actions { align-items: flex-start; flex-direction: column; gap: 20px; }

@@ -86,7 +86,7 @@ export function renderHomePage(root) {
             </ul>
           </div>
 
-          <div class="skills-panel" data-reveal>
+          <div class="skills-panel" id="skills" data-reveal>
             ${skills
               .map(
                 (skill) => `
