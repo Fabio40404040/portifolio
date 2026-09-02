@@ -4,7 +4,7 @@ import { projects, projectCategories } from './data/projects.js'
 import { skills, workSteps } from './data/skills.js'
 import { siteConfig } from './config/site.js'
 import { createProjectCard } from './components/project-card.js'
-import { setupPortfolioInteractions } from './features/portfolio.js'
+import { setupPortfolioInteractions } from './interactions.js'
 
 const root = document
 
