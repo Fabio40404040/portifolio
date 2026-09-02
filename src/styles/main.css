@@ -420,6 +420,10 @@ img { display: block; max-width: 100%; }
 .project-card:nth-child(2) .project-card__visual { background: #c8fa49; }
 .project-card:nth-child(3) .project-card__visual { background: #171a24; }
 .project-card:nth-child(4) .project-card__visual { background: #e8e9df; }
+.project-card:nth-child(5) .project-card__visual { background: #242118; }
+.project-card:nth-child(6) .project-card__visual { background: #ff805f; }
+.project-card:nth-child(7) .project-card__visual { background: #24283a; }
+.project-card:nth-child(8) .project-card__visual { background: #c7d6ea; }
 
 .project-preview {
   width: 100%;
