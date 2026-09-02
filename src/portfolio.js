@@ -1,6 +1,6 @@
 import { profile } from './data/profile.js'
 import { projects, projectCategories } from './data/projects.js'
-import { skills, workSteps } from './data/skills.js'
+import { heroSkills, skills, workSteps } from './data/skills.js'
 import { siteConfig } from './config/site.js'
 import { createProjectCard } from './components/project-card.js'
 import { setupPortfolioInteractions } from './interactions.js'
@@ -89,6 +89,25 @@ function renderSkills() {
   })
 }
 
+function renderHeroSkills() {
+  const track = root.querySelector('[data-hero-skills]')
+  const template = root.querySelector('[data-hero-skill-template]')
+
+  for (let copy = 0; copy < 2; copy += 1) {
+    const group = document.createElement('div')
+    group.className = 'hero-skills__group'
+    if (copy === 1) group.setAttribute('aria-hidden', 'true')
+
+    heroSkills.forEach((skill) => {
+      const fragment = template.content.cloneNode(true)
+      fragment.querySelector('[data-hero-skill]').textContent = skill
+      group.append(fragment)
+    })
+
+    track.append(group)
+  }
+}
+
 function renderWorkSteps() {
   const grid = root.querySelector('[data-process-grid]')
   const template = root.querySelector('[data-process-template]')
@@ -114,6 +133,7 @@ function startPortfolio() {
   renderProjects()
   renderPrinciples()
   renderSkills()
+  renderHeroSkills()
   renderWorkSteps()
   renderContact()
   setupPortfolioInteractions()

@@ -1,9 +1,11 @@
 export const skills = [
-  { group: 'Front-end', items: ['HTML semântico', 'CSS moderno', 'JavaScript ES6+'] },
-  { group: 'Back-end', items: ['Node.js', 'APIs REST', 'Banco de dados'] },
-  { group: 'Ferramentas', items: ['NPM', 'Git & GitHub', 'Integrações'] },
-  { group: 'Qualidade', items: ['Responsividade', 'Acessibilidade', 'Performance'] },
+  { group: 'Front-end', items: ['HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'React'] },
+  { group: 'Back-end', items: ['Node.js', 'Express.js', 'REST API'] },
+  { group: 'Banco de dados', items: ['PostgreSQL', 'Prisma'] },
+  { group: 'Versionamento', items: ['Git', 'GitHub'] },
 ]
+
+export const heroSkills = skills.flatMap(({ items }) => items)
 
 export const workSteps = [
   {

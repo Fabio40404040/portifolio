@@ -40,7 +40,6 @@
         <div class="hero__content">
           <p class="eyebrow"><span></span><span data-profile="availability"></span></p>
           <h1>
-            <span class="hero__name" data-profile="name"></span>
             <span class="hero__role">
               <span data-profile="headlineLead"></span>
               <span class="hero__role-focus" data-profile="headlineFocus"></span>
@@ -68,6 +67,10 @@
             <span data-profile="location"></span>
           </figcaption>
         </figure>
+
+        <div class="hero-skills" aria-label="Tecnologias que utilizo">
+          <div class="hero-skills__track" data-hero-skills></div>
+        </div>
       </section>
 
       <section class="project-section section" id="projetos">
@@ -193,6 +196,10 @@
 
     <template data-skill-item-template>
       <span data-skill-item></span>
+    </template>
+
+    <template data-hero-skill-template>
+      <span class="hero-skills__item"><i aria-hidden="true"></i><span data-hero-skill></span></span>
     </template>
 
     <template data-process-template>

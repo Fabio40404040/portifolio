@@ -196,30 +196,22 @@ img { display: block; max-width: 100%; }
 }
 
 .hero h1 {
-  max-width: 720px;
+  max-width: 680px;
   margin: 0;
-  display: grid;
-  gap: 8px;
-  font-size: clamp(3.4rem, 5.2vw, 5.4rem);
+  font-size: clamp(3.7rem, 5.7vw, 5.8rem);
   font-weight: 650;
   letter-spacing: -.065em;
   line-height: .94;
 }
 
-.hero__name {
-  color: var(--accent);
-  font-size: .72em;
-  letter-spacing: -.045em;
-}
-
 .hero__role {
   display: block;
-  font-size: .82em;
-  letter-spacing: -.052em;
-  line-height: 1;
+  letter-spacing: -.06em;
+  line-height: .92;
 }
 
-.hero__role-focus { white-space: nowrap; }
+.hero__role > span { display: block; }
+.hero__role-focus { color: var(--accent); white-space: nowrap; }
 
 .hero__tagline {
   margin: 24px 0 0;
@@ -340,6 +332,54 @@ img { display: block; max-width: 100%; }
   color: var(--muted);
   font: .72rem var(--font-mono);
   text-transform: uppercase;
+}
+
+.hero-skills {
+  grid-column: 1 / -1;
+  margin-inline: calc(clamp(22px, 4vw, 58px) * -1);
+  overflow: hidden;
+  border-block: 1px solid rgb(199 255 69 / 16%);
+  background: rgb(8 10 9 / 72%);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+}
+
+.hero-skills__track {
+  width: max-content;
+  display: flex;
+  animation: hero-skills-scroll 28s linear infinite;
+}
+
+.hero-skills:hover .hero-skills__track { animation-play-state: paused; }
+
+.hero-skills__group {
+  padding: 18px 42px 18px 0;
+  display: flex;
+  align-items: center;
+  gap: 42px;
+  flex-shrink: 0;
+}
+
+.hero-skills__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  color: #d8ddd9;
+  font: 700 .86rem var(--font-mono);
+  letter-spacing: .025em;
+  white-space: nowrap;
+}
+
+.hero-skills__item i {
+  width: 6px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 12px rgb(199 255 69 / 52%);
+}
+
+@keyframes hero-skills-scroll {
+  to { transform: translateX(-50%); }
 }
 
 .hero__visual {
@@ -719,12 +759,13 @@ img { display: block; max-width: 100%; }
   .hero { width: 100%; min-height: auto; padding: 42px 14px 52px; border-inline: 0; border-radius: 0 0 20px 20px; }
   .hero::before { background-position: 58% top; opacity: .46; }
   .hero::after { background: linear-gradient(180deg, rgb(8 10 9 / 88%) 0%, rgb(8 10 9 / 73%) 35%, rgb(8 10 9 / 96%) 72%); }
-  .hero h1 { gap: 7px; font-size: clamp(2.7rem, 12.5vw, 3.35rem); }
-  .hero__name { font-size: .68em; }
-  .hero__role { font-size: .78em; line-height: 1.04; }
-  .hero__role-focus { display: block; }
+  .hero h1 { font-size: clamp(2.9rem, 13vw, 3.65rem); }
+  .hero__role { line-height: .96; }
   .hero__actions { align-items: flex-start; flex-direction: column; gap: 20px; }
   .hero__portrait { width: min(88vw, 360px); }
+  .hero-skills { margin-inline: -14px; }
+  .hero-skills__group { padding-block: 16px; gap: 28px; }
+  .hero-skills__item { font-size: .78rem; }
   .section { padding-block: 78px; }
   .project-section { padding-top: 58px; }
   .section-heading { margin-bottom: 38px; }
@@ -756,4 +797,7 @@ img { display: block; max-width: 100%; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; }
   [data-reveal] { opacity: 1; transform: none; }
+  .hero-skills { overflow-x: auto; mask-image: none; -webkit-mask-image: none; }
+  .hero-skills__track { animation: none; }
+  .hero-skills__group[aria-hidden='true'] { display: none; }
 }
