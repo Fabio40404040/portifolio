@@ -127,26 +127,24 @@ export function setupPortfolioInteractions() {
       selectCategory(category)
       closeFilterMenus()
 
-      requestAnimationFrame(() => requestAnimationFrame(() => {
-        const selectedProject = document.querySelector(`[data-project-id="${projectId}"]`)
-        const headerHeight = document.querySelector('[data-header]')?.offsetHeight || 0
+      const selectedProject = document.querySelector(`[data-project][data-project-id="${projectId}"]`)
+      const headerHeight = document.querySelector('[data-header]')?.offsetHeight || 0
 
-        projects.forEach((project) => project.classList.remove('is-selected'))
-        selectedProject?.classList.add('is-selected')
+      projects.forEach((project) => project.classList.remove('is-selected'))
+      selectedProject?.classList.add('is-selected')
 
-        if (!selectedProject) return
+      if (!selectedProject) return
 
-        const availableHeight = window.innerHeight - headerHeight
-        const projectHeight = selectedProject.offsetHeight
-        const projectTop = selectedProject.getBoundingClientRect().top + window.scrollY
-        const centeredSpace = Math.max(16, (availableHeight - projectHeight) / 2)
-        const targetTop = projectTop - headerHeight - centeredSpace
+      const availableHeight = window.innerHeight - headerHeight
+      const projectHeight = selectedProject.offsetHeight
+      const projectTop = selectedProject.getBoundingClientRect().top + window.scrollY
+      const centeredSpace = Math.max(16, (availableHeight - projectHeight) / 2)
+      const targetTop = projectTop - headerHeight - centeredSpace
 
-        window.scrollTo({
-          behavior: 'smooth',
-          top: Math.max(0, targetTop),
-        })
-      }))
+      window.scrollTo({
+        behavior: 'instant',
+        top: Math.max(0, targetTop),
+      })
     })
   })
 
