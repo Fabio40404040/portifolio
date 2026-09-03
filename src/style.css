@@ -539,9 +539,9 @@ img { display: block; max-width: 100%; }
 .project-preview[data-visual='product'] .preview-shell--product { display: block; }
 
 .project-card__image {
-  width: min(82%, 720px);
+  width: 100%;
   height: auto;
-  max-height: 290px;
+  max-height: 100%;
   object-fit: contain;
   object-position: center;
   border-radius: 10px;

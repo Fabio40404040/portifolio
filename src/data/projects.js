@@ -16,7 +16,7 @@ export const projects = [
     year: '2026',
     tags: ['React', 'Tailwind CSS', 'JavaScript'],
     image: '/images/projects/ecommerce-suplementos-hero.png',
-    imageAlt: 'Potes de suplementos esportivos em uma composição escura com iluminação verde',
+    imageAlt: 'Página inicial da Forja Nutrition com chamada para produtos e suplementos esportivos',
     visual: 'finance',
     featured: true,
     demoUrl: 'https://loja-suplementos-alpha.vercel.app/',
