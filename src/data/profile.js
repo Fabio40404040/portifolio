@@ -1,7 +1,7 @@
 export const profile = {
   name: 'Fábio',
   initials: 'FS',
-  role: 'Desenvolvedor Front-End',
+  role: 'Fábio- Desenvolvedor Front-End',
   headlineLead: 'Desenvolvedor',
   headlineFocus: 'Front-End',
   availability: 'Disponível para novos projetos',

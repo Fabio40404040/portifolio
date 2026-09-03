@@ -6,18 +6,20 @@ function setText(field, value) {
   })
 }
 
-Object.entries(profile).forEach(([field, value]) => {
-  if (typeof value === 'string') setText(field, value)
-})
+export function renderProfile() {
+  Object.entries(profile).forEach(([field, value]) => {
+    if (typeof value === 'string') setText(field, value)
+  })
 
-const image = document.querySelector('[data-profile-photo]')
-const placeholder = document.querySelector('[data-profile-placeholder]')
+  const image = document.querySelector('[data-profile-photo]')
+  const placeholder = document.querySelector('[data-profile-placeholder]')
 
-image.hidden = !profile.photo
-placeholder.hidden = Boolean(profile.photo)
-placeholder.setAttribute('aria-label', `Espaço reservado para a foto de ${profile.name}`)
+  image.hidden = !profile.photo
+  placeholder.hidden = Boolean(profile.photo)
+  placeholder.setAttribute('aria-label', `Espaço reservado para a foto de ${profile.name}`)
 
-if (profile.photo) {
-  image.src = profile.photo
-  image.alt = profile.photoAlt
+  if (profile.photo) {
+    image.src = profile.photo
+    image.alt = profile.photoAlt
+  }
 }
