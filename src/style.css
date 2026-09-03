@@ -530,12 +530,19 @@ img { display: block; max-width: 100%; }
 }
 
 .filter-menu:last-child .filter-menu__list { right: 0; left: auto; }
-.filter-menu:hover .filter-menu__list,
 .filter-menu:focus-within .filter-menu__list,
 .filter-menu.is-open .filter-menu__list {
   visibility: visible;
   opacity: 1;
   transform: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .filter-menu:hover .filter-menu__list {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .filter-menu__project {
