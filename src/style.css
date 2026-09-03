@@ -518,6 +518,8 @@ img { display: block; max-width: 100%; }
   background: #151917;
 }
 
+.project-card__visual.has-image { padding: 8px; }
+
 .project-card:nth-child(2) .project-card__visual { background: #c8fa49; }
 .project-card:nth-child(3) .project-card__visual { background: #171a24; }
 .project-card:nth-child(4) .project-card__visual { background: #e8e9df; }

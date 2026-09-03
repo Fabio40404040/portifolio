@@ -16,6 +16,7 @@ export function createProjectCard(projectTemplate, tagTemplate, project) {
   image.hidden = !project.image
 
   if (project.image) {
+    visual.classList.add('has-image')
     image.src = project.image
     image.alt = project.imageAlt || `Tela do projeto ${project.title}`
   }
