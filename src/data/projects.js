@@ -8,8 +8,8 @@ export const projectCategories = [
 // Exemplo: demoUrl: 'https://meu-projeto.vercel.app'
 export const projects = [
   {
-    id: 'nutriforce-store',
-    title: 'NutriForce Store',
+    id: 'forja-nutrition',
+    title: 'Forja Nutrition',
     type: 'E-commerce de suplementos',
     description:'Loja virtual responsiva para apresentar suplementos, destacar ofertas e facilitar a jornada de compra.',
     category: 'site',
@@ -72,7 +72,7 @@ export const projects = [
   },
   {
     id: 'aerovision',
-    title: 'AeroVision',
+    title: 'Voa Leyanne',
     type: 'Landing page de serviço de drone',
     description:
       'Página comercial para serviços com drones, apresentando aplicações, portfólio visual e orçamento pelo WhatsApp.',
