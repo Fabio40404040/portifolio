@@ -485,8 +485,13 @@ img { display: block; max-width: 100%; }
 
 .project-filters { display: flex; gap: 7px; }
 
+.filter-menu { position: relative; }
+
 .filter-button {
   padding: 8px 13px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
   border: 0;
   border-radius: 7px;
   color: var(--muted);
@@ -495,8 +500,62 @@ img { display: block; max-width: 100%; }
   font-size: .82rem;
 }
 
+.filter-button[aria-haspopup='true']::after {
+  content: '⌄';
+  font-size: .9em;
+  line-height: 1;
+}
+
 .filter-button:hover { color: var(--text); }
 .filter-button.is-active { color: var(--accent-ink); background: var(--accent); }
+
+.filter-menu__list {
+  position: absolute;
+  z-index: 20;
+  top: calc(100% + 10px);
+  left: 0;
+  width: max-content;
+  min-width: 230px;
+  padding: 7px;
+  display: grid;
+  gap: 3px;
+  visibility: hidden;
+  opacity: 0;
+  border: 1px solid #303631;
+  border-radius: 12px;
+  background: #171b18;
+  box-shadow: 0 18px 45px rgb(0 0 0 / 35%);
+  transform: translateY(-6px);
+  transition: opacity 160ms ease, transform 160ms ease, visibility 160ms ease;
+}
+
+.filter-menu:last-child .filter-menu__list { right: 0; left: auto; }
+.filter-menu:hover .filter-menu__list,
+.filter-menu:focus-within .filter-menu__list,
+.filter-menu.is-open .filter-menu__list {
+  visibility: visible;
+  opacity: 1;
+  transform: none;
+}
+
+.filter-menu__project {
+  width: 100%;
+  padding: 10px 11px;
+  border: 0;
+  border-radius: 7px;
+  color: #c7cec9;
+  background: transparent;
+  cursor: pointer;
+  font: .78rem var(--font-sans);
+  text-align: left;
+}
+
+.filter-menu__project:hover,
+.filter-menu__project:focus-visible {
+  outline: 0;
+  color: var(--accent-ink);
+  background: var(--accent);
+}
 
 .project-grid {
   display: grid;
@@ -790,6 +849,8 @@ img { display: block; max-width: 100%; }
   .section-heading h2,
   .about-copy h2 { font-size: 2.55rem; }
   .project-toolbar { align-items: flex-start; flex-direction: column; justify-content: center; gap: 12px; padding: 13px 0; }
+  .project-filters { width: 100%; flex-wrap: wrap; }
+  .filter-menu__list { min-width: min(280px, calc(100vw - 28px)); }
   .project-grid { grid-template-columns: 1fr; gap: 52px; }
   .project-card__visual { min-height: 280px; }
   .preview-shell { height: 220px; }

@@ -10,6 +10,7 @@ export function createProjectCard(projectTemplate, tagTemplate, project) {
   const tags = fragment.querySelector('[data-project-tags]')
 
   card.dataset.category = project.category
+  card.dataset.projectId = project.id
   visual.setAttribute('aria-label', `Prévia visual de ${project.title}`)
   preview.dataset.visual = project.visual
   preview.hidden = Boolean(project.image)

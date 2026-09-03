@@ -54,7 +54,10 @@ export function setupPortfolioInteractions() {
   })
 
   document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') closeMenu()
+    if (event.key === 'Escape') {
+      closeMenu()
+      closeFilterMenus()
+    }
   })
 
   window.addEventListener('resize', () => {
@@ -75,19 +78,65 @@ export function setupPortfolioInteractions() {
 
   const filters = document.querySelectorAll('[data-filter]')
   const projects = document.querySelectorAll('[data-project]')
+  const filterMenus = document.querySelectorAll('[data-filter-menu]')
+  const filterProjects = document.querySelectorAll('[data-filter-project]')
+
+  const closeFilterMenus = () => {
+    filterMenus.forEach((menu) => menu.classList.remove('is-open'))
+    filters.forEach((filter) => filter.setAttribute('aria-expanded', 'false'))
+  }
+
+  const selectCategory = (category) => {
+    filters.forEach((item) => {
+      const isActive = item.dataset.filter === category
+      item.classList.toggle('is-active', isActive)
+      item.setAttribute('aria-pressed', String(isActive))
+    })
+
+    projects.forEach((project) => {
+      project.hidden = category !== 'all' && project.dataset.category !== category
+    })
+  }
 
   filters.forEach((filter) => {
-    filter.addEventListener('click', () => {
+    filter.addEventListener('click', (event) => {
+      event.stopPropagation()
       const category = filter.dataset.filter
-      filters.forEach((item) => item.classList.toggle('is-active', item === filter))
-      filters.forEach((item) => item.setAttribute('aria-pressed', String(item === filter)))
+      const menu = filter.closest('[data-filter-menu]')
+      const hasList = Boolean(menu?.querySelector('[data-filter-list]'))
+      const willOpen = hasList && !menu.classList.contains('is-open')
 
-      projects.forEach((project) => {
-        const shouldShow = category === 'all' || project.dataset.category === category
-        project.hidden = !shouldShow
+      closeFilterMenus()
+      selectCategory(category)
+
+      if (willOpen) {
+        menu.classList.add('is-open')
+        filter.setAttribute('aria-expanded', 'true')
+      } else {
+        filter.blur()
+      }
+    })
+  })
+
+  filterProjects.forEach((projectButton) => {
+    projectButton.addEventListener('click', (event) => {
+      event.stopPropagation()
+      const category = projectButton.dataset.category
+      const projectId = projectButton.dataset.projectId
+      projectButton.blur()
+      selectCategory(category)
+      closeFilterMenus()
+
+      requestAnimationFrame(() => {
+        document.querySelector(`[data-project-id="${projectId}"]`)?.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center',
+        })
       })
     })
   })
+
+  document.addEventListener('click', closeFilterMenus)
 
   const revealTargets = document.querySelectorAll('[data-reveal]')
 

@@ -181,7 +181,14 @@
     </footer>
 
     <template data-filter-template>
-      <button class="filter-button" type="button" data-filter></button>
+      <div class="filter-menu" data-filter-menu>
+        <button class="filter-button" type="button" data-filter></button>
+        <div class="filter-menu__list" data-filter-list></div>
+      </div>
+    </template>
+
+    <template data-filter-project-template>
+      <button class="filter-menu__project" type="button" data-filter-project></button>
     </template>
 
     <template data-principle-template>
