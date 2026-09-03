@@ -29,7 +29,7 @@ function openContactChannel(form, channel) {
   window.open(url, '_blank', 'noopener,noreferrer')
 }
 
-export function setupPortfolioInteractions() {
+function setupPortfolioInteractions() {
   const menuButton = document.querySelector('[data-menu-button]')
   const menu = document.querySelector('[data-menu]')
 
@@ -109,3 +109,5 @@ export function setupPortfolioInteractions() {
 
   revealTargets.forEach((target) => observer.observe(target))
 }
+
+setupPortfolioInteractions()

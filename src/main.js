@@ -1,2 +1,6 @@
 import './style.css'
-import './portfolio.js'
+import './components/profile-view.js'
+import './components/projects-view.js'
+import './components/skills-view.js'
+import './components/contact-view.js'
+import './interactions.js'
