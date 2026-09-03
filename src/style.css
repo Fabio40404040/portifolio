@@ -84,17 +84,10 @@ img { display: block; max-width: 100%; }
   font-weight: 700;
 }
 
-.brand > [data-profile='name'] { color: var(--accent); }
-
-.brand__mark {
-  display: grid;
-  width: 34px;
-  aspect-ratio: 1;
-  place-items: center;
-  border-radius: 8px;
-  color: var(--accent-ink);
-  background: var(--accent);
-  font: 700 .78rem var(--font-mono);
+.brand__logo {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
 }
 
 .site-nav {
@@ -213,16 +206,9 @@ img { display: block; max-width: 100%; }
 .hero__role > span { display: block; }
 .hero__role-focus { color: var(--accent); white-space: nowrap; }
 
-.hero__tagline {
-  margin: 24px 0 0;
-  color: var(--text);
-  font-size: clamp(1.25rem, 2.2vw, 1.85rem);
-  letter-spacing: -.025em;
-}
-
 .hero__description {
   max-width: 590px;
-  margin: 22px 0 0;
+  margin: 28px 0 0;
   color: var(--muted);
   font-size: 1.02rem;
   line-height: 1.7;
