@@ -128,9 +128,13 @@ export function setupPortfolioInteractions() {
       closeFilterMenus()
 
       requestAnimationFrame(() => {
-        document.querySelector(`[data-project-id="${projectId}"]`)?.scrollIntoView({
+        const selectedProject = document.querySelector(`[data-project-id="${projectId}"]`)
+
+        projects.forEach((project) => project.classList.remove('is-selected'))
+        selectedProject?.classList.add('is-selected')
+        selectedProject?.scrollIntoView({
           behavior: 'smooth',
-          block: 'center',
+          block: 'start',
         })
       })
     })

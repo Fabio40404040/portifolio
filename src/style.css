@@ -565,6 +565,13 @@ img { display: block; max-width: 100%; }
 
 .project-card[hidden] { display: none; }
 
+.project-card {
+  scroll-margin-top: 118px;
+  transition: filter 220ms ease;
+}
+
+.project-card.is-selected { filter: drop-shadow(0 0 14px rgb(199 255 69 / 18%)); }
+
 .project-card__visual {
   position: relative;
   min-height: 370px;
