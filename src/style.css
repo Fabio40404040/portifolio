@@ -632,7 +632,24 @@ img { display: block; max-width: 100%; }
 
 .project-card__meta { margin: 0 0 7px; color: var(--muted); font: .7rem var(--font-mono); text-transform: uppercase; }
 .project-card h3 { margin: 0; font-size: 1.8rem; letter-spacing: -.035em; }
-.project-card__link { display: grid; width: 44px; aspect-ratio: 1; place-items: center; border: 1px solid var(--line); border-radius: 50%; }
+.project-card__link {
+  min-height: 42px;
+  padding: 0 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: .78rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.project-card__link.is-disabled {
+  color: #747b76;
+  cursor: default;
+  pointer-events: none;
+}
+.project-card__link.is-disabled:hover { transform: none; }
 .project-card__description { max-width: 520px; margin: 17px 0 18px; color: var(--muted); line-height: 1.65; }
 .tag-list { margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 7px; list-style: none; }
 .tag-list li { padding: 6px 10px; border: 1px solid var(--line); border-radius: 999px; color: #aab1ac; font-size: .7rem; }
