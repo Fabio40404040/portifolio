@@ -4,6 +4,10 @@ export const projectCategories = [
   { id: 'landing-page', label: 'Landing pages' },
 ]
 
+// Imagens dos projetos: salve em public/images/projects.
+// Use imageFit: 'contain' para mostrar a imagem inteira sem cortes.
+// Use imageFit: 'cover' para preencher todo o card (pode haver recorte).
+// Em imagePosition, escolha: 'center', 'top', 'bottom', 'left' ou 'right'.
 // Cole o endereço publicado de cada trabalho em demoUrl.
 // Exemplo: demoUrl: 'https://meu-projeto.vercel.app'
 export const projects = [
@@ -18,6 +22,8 @@ export const projects = [
     tags: ['HTML', 'CSS', 'JavaScript'],
     image: '/images/projects/ecommerce-suplementos-hero.png',
     imageAlt: 'Página inicial da loja FBI Nutrition com suplementos esportivos',
+    imageFit: 'contain',
+    imagePosition: 'center',
     visual: 'finance',
     featured: true,
     demoUrl: 'https://loja-suplementos-alpha.vercel.app/',

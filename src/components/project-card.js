@@ -20,6 +20,8 @@ export function createProjectCard(projectTemplate, tagTemplate, project) {
     visual.classList.add('has-image')
     image.src = project.image
     image.alt = project.imageAlt || `Tela do projeto ${project.title}`
+    image.style.objectFit = project.imageFit || 'cover'
+    image.style.objectPosition = project.imagePosition || 'center'
   }
 
   fragment.querySelector('[data-project-meta]').textContent = `${project.type} · ${project.year}`
