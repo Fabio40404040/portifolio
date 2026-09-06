@@ -83,7 +83,6 @@ export const projects = [
     tags: ['HTML', 'CSS', 'JavaScript'],
     image: '/images/projects/voa-leyanne-hero.png',
     imageAlt: 'Hero completo da landing page Voa Leyanne com título, serviços e botões de contato',
-    imageAspect: '72 / 41',
     visual: 'task',
     featured: true,
     demoUrl: 'https://www.flyleyanne.com.br/',

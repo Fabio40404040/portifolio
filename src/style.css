@@ -594,10 +594,11 @@ img { display: block; max-width: 100%; }
 .project-card__visual.has-image {
   min-height: 0;
   padding: 0;
-  aspect-ratio: var(--project-image-ratio, 997 / 661);
+  aspect-ratio: 16 / 9;
 }
 
 .project-card__visual.has-image .project-card__image {
+  display: block;
   width: 100%;
   height: 100%;
   max-height: none;

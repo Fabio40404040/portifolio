@@ -18,7 +18,6 @@ export function createProjectCard(projectTemplate, tagTemplate, project) {
 
   if (project.image) {
     visual.classList.add('has-image')
-    visual.style.setProperty('--project-image-ratio', project.imageAspect || '997 / 661')
     image.src = project.image
     image.alt = project.imageAlt || `Tela do projeto ${project.title}`
   }
