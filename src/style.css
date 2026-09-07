@@ -206,9 +206,21 @@ img { display: block; max-width: 100%; }
 .hero__role > span { display: block; }
 .hero__role-focus { color: var(--accent); white-space: nowrap; }
 
+.hero__tagline {
+  margin: 18px 0 0;
+  color: #d5ddd7;
+  font: .86rem var(--font-mono);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.hero__tagline span {
+  color: var(--accent);
+}
+
 .hero__description {
   max-width: 590px;
-  margin: 28px 0 0;
+  margin: 20px 0 0;
   color: var(--muted);
   font-size: 1.02rem;
   line-height: 1.7;

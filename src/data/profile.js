@@ -1,9 +1,9 @@
 export const profile = {
   name: 'Fábio',
   initials: 'FS',
-  role: 'Fábio- Desenvolvedor Front-End',
+  role: 'Fábio- Desenvolvedor Full Stack',
   headlineLead: 'Desenvolvedor',
-  headlineFocus: 'Front-End',
+  headlineFocus: 'Full Stack',
   availability: 'Disponível para novos projetos',
   location: 'Brasil',
   photo: '/images/perfil.png',
