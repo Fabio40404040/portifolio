@@ -42,7 +42,7 @@ export const projects = [
     imageAlt: '',
     visual: 'studio',
     featured: true,
-    demoUrl: '',
+    demoUrl: 'https://guarda-municipal-gamma.vercel.app/',
     repositoryUrl: '',
   },
   {
