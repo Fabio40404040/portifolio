@@ -625,6 +625,10 @@ img { display: block; max-width: 100%; }
 .project-card:nth-child(6) .project-card__visual { background: #ff805f; }
 .project-card:nth-child(7) .project-card__visual { background: #24283a; }
 .project-card:nth-child(8) .project-card__visual { background: #c7d6ea; }
+.project-card:nth-child(9) .project-card__visual { background: #243229; }
+.project-card:nth-child(10) .project-card__visual { background: #d7ef95; }
+.project-card:nth-child(11) .project-card__visual { background: #202535; }
+.project-card:nth-child(12) .project-card__visual { background: #dfe5dc; }
 
 .project-preview {
   width: 100%;
