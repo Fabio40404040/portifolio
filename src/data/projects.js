@@ -10,7 +10,7 @@ export const projectCategories = [
 // Use imageFit: 'cover' para preencher todo o card (pode haver recorte).
 // Em imagePosition, escolha: 'center', 'top', 'bottom', 'left' ou 'right'.
 // Cole o endereço publicado de cada trabalho em demoUrl.
-// Exemplo: demoUrl: 'https://meu-projeto.vercel.app'
+// Exemplo: demoUrl: 'https://meu-projeto.pages.dev'
 export const projects = [
   //Sites quantidade (04)
   {
@@ -27,7 +27,7 @@ export const projects = [
     imagePosition: 'center',
     visual: 'finance',
     featured: true,
-    demoUrl: 'https://loja-suplementos-alpha.vercel.app/',
+    demoUrl: '',
     repositoryUrl: '',
   },
   {
@@ -45,7 +45,7 @@ export const projects = [
     imagePosition: 'center',
     visual: 'studio',
     featured: true,
-    demoUrl: 'https://guarda-municipal-gamma.vercel.app/',
+    demoUrl: 'https://guarda-municipal.pages.dev/',
     repositoryUrl: '',
   },
   {
@@ -110,7 +110,7 @@ export const projects = [
     imageAlt: 'Captura do hero da landing page Creatina Forge com cabeçalho, produto fictício e atleta',
     visual: 'finance',
     featured: true,
-    demoUrl: 'https://lange-page.vercel.app/',
+    demoUrl: 'https://lange-page-suplementos.pages.dev/',
     repositoryUrl: '',
   },
   {
@@ -126,7 +126,7 @@ export const projects = [
     imageAlt: '',
     visual: 'product',
     featured: true,
-    demoUrl: '',
+    demoUrl: 'https://lange-page-roupas.pages.dev/',
     repositoryUrl: '',
   },
   {
