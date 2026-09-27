@@ -147,8 +147,8 @@ export const projects = [
   },
   // Aplicações web quantidade (04)
   {
-    id: 'fitpro-manager',
-    title: 'FitPro Manager',
+    id: 'farisa-personal-trainner',
+    title: 'Farisa Personal Trainner',
     type: 'Sistema para personal trainer',
     description:
       'Aplicação para organizar alunos, treinos, avaliações físicas, evolução e acompanhamento individual em um só lugar.',
@@ -159,7 +159,7 @@ export const projects = [
     imageAlt: '',
     visual: 'finance',
     featured: false,
-    demoUrl: '',
+    demoUrl: 'https://portifolio-e9b.pages.dev/',
     repositoryUrl: '',
   },
   {
