@@ -1,0 +1,18 @@
+{
+  "name": "Fábio — Desenvolvedor Front-End",
+  "short_name": "Fábio Dev",
+  "description": "Portfólio de Fábio, desenvolvedor Front-End especializado em interfaces modernas, responsivas e orientadas a resultados.",
+  "lang": "pt-BR",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0b0d0c",
+  "theme_color": "#0b0d0c",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
