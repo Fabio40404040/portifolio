@@ -159,7 +159,7 @@ export const projects = [
     imageAlt: '',
     visual: 'finance',
     featured: false,
-    demoUrl: 'https://portifolio-e9b.pages.dev/,
+    demoUrl: 'https://aplicacaoweb-sistema-personal-trainer.pages.dev/',
     repositoryUrl: '',
   },
   {
