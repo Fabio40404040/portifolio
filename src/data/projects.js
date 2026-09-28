@@ -114,8 +114,8 @@ export const projects = [
     repositoryUrl: '',
   },
   {
-    id: 'vertice-wear',
-    title: 'Vértice Wear',
+    id: 'frs-wear',
+    title: 'FRS Wear',
     type: 'Landing page de roupas',
     description:
       'Página de campanha para uma coleção de moda, com identidade marcante, catálogo visual e chamadas para compra.',
