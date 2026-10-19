@@ -196,7 +196,7 @@ export const projects = [
     year: '2026',
     tags: ['HTML', 'CSS', 'JavaScript', 'Cloudflare Workers', 'Cloudflare D1', 'Cloudflare R2', 'Mercado Pago'],
     image: '/images/projects/farisa-personal-hero.webp',
-    imageAlt: 'Hero do sistema Farisa Personal com personal trainer na academia e chamada para consultoria online personalizada',
+    imageAlt: 'Página inicial da plataforma FARISAFIT com a chamada principal e o exemplo da página de um personal, com dois personal trainers lado a lado',
     imageFit: 'cover',
     imagePosition: 'center',
     visual: 'finance',
@@ -207,7 +207,7 @@ export const projects = [
       type: 'Personal trainer platform',
       description:
         'Web app to manage students, workouts, physical assessments, progress and one-on-one coaching in one place.',
-      imageAlt: 'Hero of the FARISAFIT platform with a personal trainer at the gym and a call to online coaching',
+      imageAlt: 'FARISAFIT platform home page with the main headline and an example trainer page featuring two personal trainers side by side',
     },
   },
   {
