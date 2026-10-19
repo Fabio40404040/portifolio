@@ -5,6 +5,26 @@
 
 const SUPPORTED = ['pt', 'en']
 const STORAGE_KEY = 'portfolio-lang'
+const SCROLL_KEY = 'portfolio-lang-scroll'
+
+// Posição da tela antes de trocar o idioma, para voltar ao mesmo ponto depois.
+let pendingScroll = null
+try {
+  const saved = window.sessionStorage.getItem(SCROLL_KEY)
+  if (saved !== null) {
+    window.sessionStorage.removeItem(SCROLL_KEY)
+    pendingScroll = Number(saved) || 0
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual'
+  }
+} catch {
+  // sem armazenamento: a página abre do jeito normal
+}
+
+// Chamado depois de montar a página: volta para onde o visitante estava.
+export function restoreScrollAfterLanguageChange() {
+  if (pendingScroll === null) return
+  window.scrollTo({ top: pendingScroll, behavior: 'instant' })
+}
 
 function detectLanguage() {
   const fromUrl = new URLSearchParams(window.location.search).get('lang')
@@ -156,12 +176,15 @@ export function setupLanguageSwitch() {
 
       try {
         window.localStorage.setItem(STORAGE_KEY, next)
+        window.sessionStorage.setItem(SCROLL_KEY, String(window.scrollY))
       } catch {
         // sem armazenamento: o idioma continua no link (?lang=)
       }
 
+      // Tira o #seção do link para o navegador não pular até ela ao recarregar.
       const url = new URL(window.location.href)
       url.searchParams.set('lang', next)
+      url.hash = ''
       window.location.assign(url)
     })
   })
