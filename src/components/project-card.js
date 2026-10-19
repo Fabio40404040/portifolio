@@ -1,6 +1,8 @@
+import { t } from '../i18n.js'
+
 export function createProjectCard(projectTemplate, tagTemplate, project) {
   const hasDemo = Boolean(project.demoUrl)
-  const linkLabel = hasDemo ? 'Ver projeto' : 'Projeto em breve'
+  const linkLabel = hasDemo ? t.viewProject : t.comingSoon
   const fragment = projectTemplate.content.cloneNode(true)
   const card = fragment.querySelector('[data-project]')
   const visual = fragment.querySelector('[data-project-visual]')
@@ -11,7 +13,8 @@ export function createProjectCard(projectTemplate, tagTemplate, project) {
 
   card.dataset.category = project.category
   card.dataset.projectId = project.id
-  visual.setAttribute('aria-label', `Prévia visual de ${project.title}`)
+  visual.setAttribute('aria-label', `${t.visualPreview} ${project.title}`)
+  tags.setAttribute('aria-label', t.technologiesUsed)
   preview.dataset.visual = project.visual
   preview.hidden = Boolean(project.image)
   image.hidden = !project.image
@@ -19,7 +22,7 @@ export function createProjectCard(projectTemplate, tagTemplate, project) {
   if (project.image) {
     visual.classList.add('has-image')
     image.src = project.image
-    image.alt = project.imageAlt || `Tela do projeto ${project.title}`
+    image.alt = project.imageAlt || `${t.projectScreen} ${project.title}`
     image.style.objectFit = project.imageFit || 'cover'
     image.style.objectPosition = project.imagePosition || 'center'
   }

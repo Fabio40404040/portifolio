@@ -1,12 +1,13 @@
 import { siteConfig } from './config/site.js'
+import { t } from './i18n.js'
 
 function getContactMessage(form) {
   const formData = new FormData(form)
 
   return [
-    `Olá, Fábio! Meu nome é ${formData.get('name')}.`,
-    `E-mail: ${formData.get('email')}`,
-    `Tipo de projeto: ${formData.get('projectType')}`,
+    t.messageGreeting(formData.get('name')),
+    `${t.messageEmail}: ${formData.get('email')}`,
+    `${t.messageType}: ${formData.get('projectType')}`,
     '',
     String(formData.get('message')),
   ].join('\n')
@@ -22,7 +23,7 @@ function openContactChannel(form, channel) {
         view: 'cm',
         fs: '1',
         to: siteConfig.email,
-        su: 'Contato pelo portfólio',
+        su: t.emailSubject,
         body: message,
       })}`
 
@@ -35,7 +36,7 @@ export function setupPortfolioInteractions() {
 
   const closeMenu = () => {
     menuButton?.setAttribute('aria-expanded', 'false')
-    menuButton?.setAttribute('aria-label', 'Abrir menu')
+    menuButton?.setAttribute('aria-label', t.openMenu)
     menu?.classList.remove('is-open')
     document.body.classList.remove('menu-open')
   }
@@ -43,7 +44,7 @@ export function setupPortfolioInteractions() {
   menuButton?.addEventListener('click', () => {
     const isOpen = menuButton.getAttribute('aria-expanded') === 'true'
     menuButton.setAttribute('aria-expanded', String(!isOpen))
-    menuButton.setAttribute('aria-label', isOpen ? 'Abrir menu' : 'Fechar menu')
+    menuButton.setAttribute('aria-label', isOpen ? t.openMenu : t.closeMenu)
     menu?.classList.toggle('is-open', !isOpen)
     document.body.classList.toggle('menu-open', !isOpen)
   })

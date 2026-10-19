@@ -122,6 +122,50 @@ img { display: block; max-width: 100%; }
 
 .menu-button { display: none; }
 
+/* Seletor de idioma (EN | BR) */
+.lang-switch {
+  grid-column: 3;
+  justify-self: end;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 4px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #111512;
+  font: .74rem var(--font-mono);
+  letter-spacing: .04em;
+}
+
+.lang-switch__option {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 10px;
+  border: 0;
+  border-radius: 999px;
+  color: var(--muted);
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+  transition: color 180ms ease, background 180ms ease;
+}
+
+.lang-switch__option:hover { color: var(--text); }
+.lang-switch__option[aria-pressed='true'] { color: var(--accent-ink); background: var(--accent); }
+.lang-switch__divider { color: #3c443e; }
+
+.lang-switch__flag {
+  display: block;
+  width: 20px;
+  height: 14px;
+  overflow: hidden;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgb(255 255 255 / 12%);
+}
+
+.lang-switch__flag svg { display: block; width: 100%; height: 100%; }
+
 .hero {
   position: relative;
   isolation: isolate;
@@ -860,9 +904,11 @@ img { display: block; max-width: 100%; }
 
 @media (max-width: 620px) {
   :root { --page: min(100% - 28px, 1180px); }
-  .site-header { height: 76px; padding-inline: 14px; grid-template-columns: 1fr auto; background: #0b0d0c; backdrop-filter: none; -webkit-backdrop-filter: none; }
+  .site-header { height: 76px; padding-inline: 14px; grid-template-columns: 1fr auto auto; gap: 10px; background: #0b0d0c; backdrop-filter: none; -webkit-backdrop-filter: none; }
+  .lang-switch { position: relative; z-index: 102; grid-column: 2; grid-row: 1; }
+  .lang-switch__option { padding: 6px 8px; gap: 6px; }
   .site-header .brand { position: relative; z-index: 102; }
-  .menu-button { position: relative; z-index: 102; grid-column: 2; justify-self: end; width: 42px; height: 42px; padding: 0; display: grid; place-content: center; gap: 6px; border: 1px solid #394039; border-radius: 50%; background: #111512; cursor: pointer; }
+  .menu-button { position: relative; z-index: 102; grid-column: 3; grid-row: 1; justify-self: end; width: 42px; height: 42px; padding: 0; display: grid; place-content: center; gap: 6px; border: 1px solid #394039; border-radius: 50%; background: #111512; cursor: pointer; }
   .menu-button span { width: 17px; height: 1px; background: var(--text); transition: transform 180ms ease; }
   .menu-button[aria-expanded='true'] span:first-child { transform: translateY(3.5px) rotate(45deg); }
   .menu-button[aria-expanded='true'] span:last-child { transform: translateY(-3.5px) rotate(-45deg); }

@@ -4,12 +4,16 @@ import { renderProjects } from './components/projects-view.js'
 import { renderSkills } from './components/skills-view.js'
 import { renderContact } from './components/contact-view.js'
 import { setupPortfolioInteractions } from './interactions.js'
+import { applyStaticTranslations, setupLanguageSwitch, t } from './i18n.js'
 
+applyStaticTranslations()
+document.querySelector('[data-menu-button]')?.setAttribute('aria-label', t.openMenu)
 renderProfile()
 renderProjects()
 renderSkills()
 renderContact()
 setupPortfolioInteractions()
+setupLanguageSwitch()
 
 // PWA: registra o service worker (só no build de produção, para não atrapalhar o "npm run dev")
 if ('serviceWorker' in navigator && import.meta.env.PROD) {

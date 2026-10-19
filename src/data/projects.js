@@ -1,15 +1,18 @@
+import { localize } from '../i18n.js'
+
 export const projectCategories = [
-  { id: 'all', label: 'Todos' },
-  { id: 'site', label: 'Sites' },
-  { id: 'landing-page', label: 'Landing pages' },
-  { id: 'web-app', label: 'Aplicações web' },
-]
+  { id: 'all', label: 'Todos', en: { label: 'All' } },
+  { id: 'site', label: 'Sites', en: { label: 'Websites' } },
+  { id: 'landing-page', label: 'Landing pages', en: { label: 'Landing pages' } },
+  { id: 'web-app', label: 'Aplicações web', en: { label: 'Web apps' } },
+].map(localize)
 
 // Imagens dos projetos: salve em public/images/projects.
 // Use imageFit: 'contain' para mostrar a imagem inteira sem cortes.
 // Use imageFit: 'cover' para preencher todo o card (pode haver recorte).
 // Em imagePosition, escolha: 'center', 'top', 'bottom', 'left' ou 'right'.
 // Use hidden: true para esconder um projeto que ainda não está pronto.
+// O campo en guarda a versão em inglês (type, description, imageAlt).
 // Cole o endereço publicado de cada trabalho em demoUrl.
 // Exemplo: demoUrl: 'https://meu-projeto.pages.dev'
 export const projects = [
@@ -31,6 +34,12 @@ export const projects = [
     featured: true,
     demoUrl: '',
     repositoryUrl: '',
+    en: {
+      type: 'Supplement e-commerce',
+      description:
+        'Responsive online store to showcase supplements, highlight deals and make the buying journey easier.',
+      imageAlt: 'Home page of the FBI Nutrition store with sports supplements',
+    },
   },
   {
     id: 'guarda municipal',
@@ -49,6 +58,12 @@ export const projects = [
     featured: true,
     demoUrl: 'https://guarda-municipal.pages.dev/',
     repositoryUrl: '',
+    en: {
+      type: 'Institutional website',
+      description:
+        'Institutional portal for the Municipal Guard with services, news, guidance, public resources and contact channels for citizens.',
+      imageAlt: 'Hero section of the Municipal Guard website with a patrol car, navigation and main call to action',
+    },
   },
   {
     id: 'essenza-clinica',
@@ -100,6 +115,12 @@ export const projects = [
     featured: true,
     demoUrl: 'https://www.flyleyanne.com.br/',
     repositoryUrl: '',
+    en: {
+      type: 'Drone services landing page',
+      description:
+        'Sales page for drone services, showcasing use cases, a visual portfolio and quote requests via WhatsApp.',
+      imageAlt: 'Full hero of the Voa Leyanne landing page with headline, services and contact buttons',
+    },
   },
   {
     id: 'fbi-suplementos',
@@ -116,6 +137,12 @@ export const projects = [
     featured: true,
     demoUrl: 'https://lange-page-suplementos.pages.dev/',
     repositoryUrl: '',
+    en: {
+      type: 'Supplement landing page',
+      description:
+        'Conversion-focused page for a supplement launch, with benefits, social proof and a clear call to action.',
+      imageAlt: 'Hero of the Creatina Forge landing page with header, product and athlete',
+    },
   },
   {
     id: 'frs-wear',
@@ -134,6 +161,12 @@ export const projects = [
     featured: true,
     demoUrl: 'https://lange-page-roupas.pages.dev/',
     repositoryUrl: '',
+    en: {
+      type: 'Clothing landing page',
+      description:
+        'Campaign page for a fashion collection, with a bold identity, visual catalog and calls to purchase.',
+      imageAlt: 'Hero of the FRS Wear landing page with a clothing store in the background',
+    },
   },
   {
     id: 'horizonte-imoveis',
@@ -170,6 +203,12 @@ export const projects = [
     featured: false,
     demoUrl: 'https://aplicacaoweb-sistema-personal-trainer.pages.dev/',
     repositoryUrl: '',
+    en: {
+      type: 'Personal trainer platform',
+      description:
+        'Web app to manage students, workouts, physical assessments, progress and one-on-one coaching in one place.',
+      imageAlt: 'Hero of the FARISAFIT platform with a personal trainer at the gym and a call to online coaching',
+    },
   },
   {
     id: 'frs-barbearia',
@@ -188,6 +227,12 @@ export const projects = [
     featured: false,
     demoUrl: 'https://frs-barbearia.fabioribeirodev.workers.dev/',
     repositoryUrl: '',
+    en: {
+      type: 'Barbershop booking system',
+      description:
+        'Online booking with barber and service selection, schedule management and appointment confirmation via WhatsApp.',
+      imageAlt: "Hero of the FRS Barbershop website with a barber cutting a client's hair",
+    },
   },
   {
     id: 'estoque-facil',
@@ -226,4 +271,4 @@ export const projects = [
 ]
 
 // Somente os projetos prontos aparecem no site.
-export const visibleProjects = projects.filter((project) => !project.hidden)
+export const visibleProjects = projects.filter((project) => !project.hidden).map(localize)
