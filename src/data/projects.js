@@ -194,7 +194,7 @@ export const projects = [
       'Aplicação para organizar alunos, treinos, avaliações físicas, evolução e acompanhamento individual em um só lugar.',
     category: 'web-app',
     year: '2026',
-    tags: ['HTML', 'CSS', 'JavaScript', 'Cloudflare Workers', 'Cloudflare D1', 'Cloudflare R2', 'Mercado Pago'],
+    tags: ['HTML', 'CSS', 'JavaScript', 'Cloudflare Workers', 'Cloudflare D1', 'SQL', 'Cloudflare R2', 'Mercado Pago', 'Brevo'],
     image: '/images/projects/farisa-personal-hero.webp',
     imageAlt: 'Página inicial da plataforma FARISAFIT com a chamada principal e o exemplo da página de um personal, com dois personal trainers lado a lado',
     imageFit: 'cover',
@@ -208,6 +208,7 @@ export const projects = [
       description:
         'Web app to manage students, workouts, physical assessments, progress and one-on-one coaching in one place.',
       imageAlt: 'FARISAFIT platform home page with the main headline and an example trainer page featuring two personal trainers side by side',
+      image: '/images/projects/farisa-saas-en.webp',
     },
   },
   {
