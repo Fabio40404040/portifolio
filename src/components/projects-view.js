@@ -1,4 +1,4 @@
-import { projectCategories, projects } from '../data/projects.js'
+import { projectCategories, visibleProjects as projects } from '../data/projects.js'
 import { createProjectCard } from './project-card.js'
 
 export function renderProjects() {

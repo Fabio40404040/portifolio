@@ -1,6 +1,6 @@
 // Service worker do portfólio (PWA).
 // Troque a versão sempre que quiser forçar a limpeza do cache antigo.
-const CACHE = 'portfolio-v1'
+const CACHE = 'portfolio-v2'
 const PRECACHE = ['/', '/manifest.webmanifest', '/images/logo-fs.svg', '/icons/icon-192.png', '/icons/icon-512.png']
 
 self.addEventListener('install', (event) => {

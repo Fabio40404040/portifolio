@@ -9,19 +9,21 @@ export const projectCategories = [
 // Use imageFit: 'contain' para mostrar a imagem inteira sem cortes.
 // Use imageFit: 'cover' para preencher todo o card (pode haver recorte).
 // Em imagePosition, escolha: 'center', 'top', 'bottom', 'left' ou 'right'.
+// Use hidden: true para esconder um projeto que ainda não está pronto.
 // Cole o endereço publicado de cada trabalho em demoUrl.
 // Exemplo: demoUrl: 'https://meu-projeto.pages.dev'
 export const projects = [
   //Sites quantidade (04)
   {
     id: 'fbi-nutrition',
+    hidden: true, // aparece no site quando tiver imagem e link (demoUrl)
     title: 'FBI Nutrition',
     type: 'E-commerce de suplementos',
     description:'Loja virtual responsiva para apresentar suplementos, destacar ofertas e facilitar a jornada de compra.',
     category: 'site',
     year: '2026',
     tags: ['HTML', 'CSS', 'JavaScript'],
-    image: '/images/projects/ecommerce-suplementos-hero.png',
+    image: '/images/projects/ecommerce-suplementos-hero.webp',
     imageAlt: 'Página inicial da loja FBI Nutrition com suplementos esportivos',
     imageFit: 'contain',
     imagePosition: 'center',
@@ -39,7 +41,7 @@ export const projects = [
     category: 'site',
     year: '2026',
     tags: ['HTML', 'CSS', 'JavaScript'],
-    image: '/images/projects/guarda-municipal-hero.png',
+    image: '/images/projects/guarda-municipal-hero.webp',
     imageAlt: 'Captura do hero do site institucional da Guarda Municipal com viatura, navegação e chamada principal',
     imageFit: 'contain',
     imagePosition: 'center',
@@ -50,6 +52,7 @@ export const projects = [
   },
   {
     id: 'essenza-clinica',
+    hidden: true, // aparece no site quando tiver imagem e link (demoUrl)
     title: 'Clínica Essenza',
     type: 'Site para clínica',
     description:
@@ -66,6 +69,7 @@ export const projects = [
   },
   {
     id: 'sabores-da-vila',
+    hidden: true, // aparece no site quando tiver imagem e link (demoUrl)
     title: 'Sabores da Vila',
     type: 'Site para restaurante',
     description:
@@ -90,7 +94,7 @@ export const projects = [
     category: 'landing-page',
     year: '2026',
     tags: ['HTML', 'CSS', 'JavaScript'],
-    image: '/images/projects/voa-leyanne-hero.png',
+    image: '/images/projects/voa-leyanne-hero.webp',
     imageAlt: 'Hero completo da landing page Voa Leyanne com título, serviços e botões de contato',
     visual: 'task',
     featured: true,
@@ -106,7 +110,7 @@ export const projects = [
     category: 'landing-page',
     year: '2026',
     tags: ['React', 'Tailwind CSS', 'JavaScript'],
-    image: '/images/projects/creatina-forge-hero.png',
+    image: '/images/projects/creatina-forge-hero.webp',
     imageAlt: 'Captura do hero da landing page Creatina Forge com cabeçalho, produto fictício e atleta',
     visual: 'finance',
     featured: true,
@@ -122,7 +126,7 @@ export const projects = [
     category: 'landing-page',
     year: '2026',
     tags: ['HTML', 'CSS', 'JavaScript'],
-    image: '/images/projects/img-hero-frs-roupas.png',
+    image: '/images/projects/img-hero-frs-roupas.webp',
     imageAlt: 'Hero da landing page FRS-Wear com loja de roupas ao fundo e chamada Roupa boa, gente boa, do seu bairro pra você.',
     imageFit: 'cover',
     imagePosition: 'center',
@@ -133,6 +137,7 @@ export const projects = [
   },
   {
     id: 'horizonte-imoveis',
+    hidden: true, // aparece no site quando tiver imagem e link (demoUrl)
     title: 'Horizonte Imóveis',
     type: 'Landing page imobiliária',
     description:
@@ -150,14 +155,14 @@ export const projects = [
   // Aplicações web quantidade (04)
   {
     id: 'farisa-personal-trainner',
-    title: 'Farisa Personal Trainner',
+    title: 'Farisa Personal Trainer',
     type: 'Sistema para personal trainer',
     description:
       'Aplicação para organizar alunos, treinos, avaliações físicas, evolução e acompanhamento individual em um só lugar.',
     category: 'web-app',
     year: '2026',
     tags: ['React', 'Node.js', 'Express.js', 'PostgreSQL'],
-    image: '/images/projects/farisa-personal-hero.png',
+    image: '/images/projects/farisa-personal-hero.webp',
     imageAlt: 'Hero do sistema Farisa Personal com personal trainer na academia e chamada para consultoria online personalizada',
     imageFit: 'cover',
     imagePosition: 'center',
@@ -175,7 +180,7 @@ export const projects = [
     category: 'web-app',
     year: '2026',
     tags: ['React', 'Node.js', 'Express.js', 'PostgreSQL'],
-    image: '/images/projects/frs-barbearia-hero.jpg',
+    image: '/images/projects/frs-barbearia-hero.webp',
     imageAlt: 'Hero do site FRS Barbearia com barbeiro cortando cabelo de cliente e chamada Seu estilo. Nossa assinatura.',
     imageFit: 'cover',
     imagePosition: 'center',
@@ -186,6 +191,7 @@ export const projects = [
   },
   {
     id: 'estoque-facil',
+    hidden: true, // aparece no site quando tiver imagem e link (demoUrl)
     title: 'Estoque Fácil',
     type: 'Sistema de estoque e vendas',
     description:
@@ -202,6 +208,7 @@ export const projects = [
   },
   {
     id: 'pedido-agil',
+    hidden: true, // aparece no site quando tiver imagem e link (demoUrl)
     title: 'Pedido Ágil',
     type: 'Sistema de pedidos para restaurantes',
     description:
@@ -217,3 +224,6 @@ export const projects = [
     repositoryUrl: '',
   },
 ]
+
+// Somente os projetos prontos aparecem no site.
+export const visibleProjects = projects.filter((project) => !project.hidden)

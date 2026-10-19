@@ -1,16 +1,29 @@
 
-import { defineConfig } from 'vite';
+import { defineConfig, loadEnv } from 'vite';
 
-export default defineConfig({
-  // Caminho absoluto (raiz do domínio) — é assim que Vercel/Netlify
-  // servem o site, e simplifica montar o link público de cada foto.
-  base: '/',
-  build: {
-    outDir: 'dist',
-    assetsDir: 'assets',
-    // Sempre gera um arquivo de verdade pra cada imagem (nunca embute
-    // como base64), pra garantir que toda imagem tenha um link público
-    // — necessário pra mandar a foto do produto na mensagem do WhatsApp.
-    assetsInlineLimit: 0
-  }
+export default defineConfig(({ mode }) => {
+  // Endereço público do portfólio (ex.: https://fabio.dev), usado na imagem
+  // de compartilhamento do LinkedIn/WhatsApp. Defina VITE_SITE_URL no arquivo
+  // .env ou nas variáveis de ambiente da hospedagem (Cloudflare/Vercel/Netlify).
+  const env = loadEnv(mode, process.cwd(), '');
+  const siteUrl = (env.VITE_SITE_URL || '').replace(/\/$/, '');
+
+  return {
+    // Caminho absoluto (raiz do domínio) — é assim que Vercel/Netlify
+    // servem o site, e simplifica montar o link público de cada foto.
+    base: '/',
+    plugins: [
+      {
+        name: 'site-url',
+        transformIndexHtml: (html) => html.replaceAll('%VITE_SITE_URL%', siteUrl),
+      },
+    ],
+    build: {
+      outDir: 'dist',
+      assetsDir: 'assets',
+      // Sempre gera um arquivo de verdade pra cada imagem (nunca embute
+      // como base64), pra garantir que toda imagem tenha um link público.
+      assetsInlineLimit: 0
+    }
+  };
 });

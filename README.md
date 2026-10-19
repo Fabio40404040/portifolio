@@ -31,7 +31,6 @@ src/components/         Componentes reutilizáveis
 src/config/             Links e configurações de contato
 src/data/               Perfil, habilidades e projetos
 src/interactions.js     Menu, filtros e animações
-src/portfolio.js        Montagem do conteúdo da página
 src/main.js             Ponto de entrada da aplicação
 src/style.css           Estilos do portfólio
 index.html              Estrutura HTML principal

@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Ubuntu Sans';
-  src: url('./assets/fonts/UbuntuSans.ttf') format('truetype');
+  src: url('./assets/fonts/UbuntuSans.woff2') format('woff2');
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: 'Ubuntu Mono';
-  src: url('./assets/fonts/UbuntuMono.ttf') format('truetype');
+  src: url('./assets/fonts/UbuntuMono.woff2') format('woff2');
   font-style: normal;
   font-weight: 100 700;
   font-display: swap;
@@ -149,7 +149,7 @@ img { display: block; max-width: 100%; }
 
 .hero::before {
   z-index: -2;
-  background: url('/images/hero-tech.png') center / cover no-repeat;
+  background: url('/images/hero-tech.webp') center / cover no-repeat;
   opacity: .78;
 }
 
@@ -800,7 +800,8 @@ img { display: block; max-width: 100%; }
 .contact-card h2 { position: relative; z-index: 1; font-size: clamp(3.1rem, 6vw, 6.3rem); }
 .contact-card__intro > p:not(.section-kicker) { max-width: 540px; margin: 28px 0 32px; color: #44501e; font-size: 1.05rem; line-height: 1.65; }
 .button--dark { position: relative; z-index: 1; color: var(--text); background: var(--accent-ink); }
-.contact-email { color: #4d5b22; font: .75rem var(--font-mono); }
+.contact-email { color: #4d5b22; font: .75rem var(--font-mono); text-decoration: underline; text-underline-offset: 3px; }
+.contact-email:hover { color: #1d2408; }
 
 .contact-form { position: relative; z-index: 1; padding: 28px; border: 1px solid #30372f; border-radius: 18px; color: var(--text); background: rgb(11 13 12 / 96%); box-shadow: 0 24px 55px rgb(34 45 10 / 18%); }
 .contact-form__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
