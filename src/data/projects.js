@@ -155,13 +155,13 @@ export const projects = [
   // Aplicações web quantidade (04)
   {
     id: 'farisa-personal-trainner',
-    title: 'Farisa Personal Trainer',
+    title: 'FARISAFIT Personal Trainer',
     type: 'Sistema para personal trainer',
     description:
       'Aplicação para organizar alunos, treinos, avaliações físicas, evolução e acompanhamento individual em um só lugar.',
     category: 'web-app',
     year: '2026',
-    tags: ['React', 'Node.js', 'Express.js', 'PostgreSQL'],
+    tags: ['HTML', 'CSS', 'JavaScript', 'Cloudflare Workers', 'Cloudflare D1', 'Cloudflare R2', 'Mercado Pago'],
     image: '/images/projects/farisa-personal-hero.webp',
     imageAlt: 'Hero do sistema Farisa Personal com personal trainer na academia e chamada para consultoria online personalizada',
     imageFit: 'cover',
