@@ -3,5 +3,7 @@ export const siteConfig = {
   whatsapp: '5588999523807',
   linkedin: 'https://www.linkedin.com/in/f%C3%A1bio-ribeiro-2333702b2',
   github: 'https://github.com/Fabio40404040',
-  cvPath: '',
+  // Currículo em PDF (pasta public). O site em inglês usa o cvPathEn.
+  cvPath: '/curriculo-fabio-ribeiro.pdf',
+  cvPathEn: '/resume-fabio-ribeiro.pdf',
 }

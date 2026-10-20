@@ -104,6 +104,7 @@ const staticEn = {
     'I lead every project with responsibility, clear communication and a commitment to well-built, secure delivery that matches what was agreed.',
   'hero.cta': 'View projects',
   'hero.link': 'See my work',
+  'hero.cv': 'Download resume',
   'hero.skills': 'Technologies I use',
   'projects.kicker': 'Selected work',
   'projects.title': 'Projects that turn<br>ideas into reality.',

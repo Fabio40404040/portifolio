@@ -273,8 +273,9 @@ img { display: block; max-width: 100%; }
 .hero__actions {
   margin-top: 54px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 28px;
+  gap: 16px 28px;
 }
 
 .button {
@@ -289,6 +290,9 @@ img { display: block; max-width: 100%; }
 }
 
 .button--primary { color: var(--accent-ink); background: var(--accent); }
+.button--outline { border: 1px solid #3a423b; color: var(--text); background: rgb(17 21 18 / 70%); }
+.button--outline:hover { border-color: var(--accent); }
+.button[hidden] { display: none; }
 .text-link { color: var(--muted); font-size: .94rem; }
 
 .button,
