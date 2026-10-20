@@ -27,6 +27,13 @@ export function createProjectCard(projectTemplate, tagTemplate, project) {
     image.style.objectPosition = project.imagePosition || 'center'
   }
 
+  if (project.status) {
+    const badge = document.createElement('span')
+    badge.className = 'project-card__status'
+    badge.textContent = project.status
+    visual.append(badge)
+  }
+
   fragment.querySelector('[data-project-meta]').textContent = `${project.type} · ${project.year}`
   fragment.querySelector('[data-project-title]').textContent = project.title
   fragment.querySelector('[data-project-description]').textContent = project.description

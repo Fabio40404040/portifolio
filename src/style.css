@@ -654,6 +654,35 @@ img { display: block; max-width: 100%; }
   padding: 0;
 }
 
+/* Selo de status no card (ex.: Em desenvolvimento) */
+.project-card__status {
+  position: absolute;
+  z-index: 2;
+  top: 14px;
+  left: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px;
+  border: 1px solid rgb(199 255 69 / 45%);
+  border-radius: 999px;
+  color: var(--accent);
+  background: rgb(11 13 12 / 82%);
+  font: .68rem var(--font-mono);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  backdrop-filter: blur(6px);
+}
+
+.project-card__status::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 3px rgb(199 255 69 / 18%);
+}
+
 .project-card__visual.has-image .project-card__image {
   position: absolute;
   inset: 0;

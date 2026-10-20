@@ -13,6 +13,7 @@ export const projectCategories = [
 // Em imagePosition, escolha: 'center', 'top', 'bottom', 'left' ou 'right'.
 // Use hidden: true para esconder um projeto que ainda não está pronto.
 // O campo en guarda a versão em inglês (type, description, imageAlt).
+// Use status: 'Em desenvolvimento' para mostrar um selo na imagem do card.
 // Cole o endereço publicado de cada trabalho em demoUrl.
 // Exemplo: demoUrl: 'https://meu-projeto.pages.dev'
 export const projects = [
@@ -214,12 +215,13 @@ export const projects = [
   {
     id: 'frs-barbearia',
     title: 'FRS Barbearia',
-    type: 'Sistema de agendamento para barbearia',
+    type: 'SaaS para barbearias',
+    status: 'Em desenvolvimento',
     description:
-      'Agenda online com escolha de profissional e serviço, controle de horários e confirmação de atendimento pelo WhatsApp.',
+      'Plataforma para barbearias com agenda online, escolha de serviço e horário, proteção contra reservas no mesmo horário, fila de espera e painel para agenda, serviços e promoções.',
     category: 'web-app',
     year: '2026',
-    tags: ['React', 'Node.js', 'Express.js', 'PostgreSQL'],
+    tags: ['HTML', 'CSS', 'JavaScript', 'Vite', 'Cloudflare Workers', 'Cloudflare D1', 'SQL'],
     image: '/images/projects/frs-barbearia-hero.webp',
     imageAlt: 'Hero do site FRS Barbearia com barbeiro cortando cabelo de cliente e chamada Seu estilo. Nossa assinatura.',
     imageFit: 'cover',
@@ -229,9 +231,10 @@ export const projects = [
     demoUrl: 'https://frs-barbearia.fabioribeirodev.workers.dev/',
     repositoryUrl: '',
     en: {
-      type: 'Barbershop booking system',
+      type: 'SaaS for barbershops',
+      status: 'In development',
       description:
-        'Online booking with barber and service selection, schedule management and appointment confirmation via WhatsApp.',
+        'Platform for barbershops with online booking, service and time selection, double-booking protection, a waitlist and an admin panel for schedule, services and promotions.',
       imageAlt: "Hero of the FRS Barbershop website with a barber cutting a client's hair",
     },
   },
