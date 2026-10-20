@@ -149,8 +149,9 @@ export const projects = [
     id: 'frs-wear',
     title: 'FRS Wear',
     type: 'Landing page de roupas',
+    status: 'Em desenvolvimento',
     description:
-      'Página de campanha para uma coleção de moda, com identidade marcante, catálogo visual e chamadas para compra.',
+      'Página de campanha para uma coleção de moda, com identidade marcante, catálogo visual e chamadas para compra. Em evolução para uma loja web com back-end.',
     category: 'landing-page',
     year: '2026',
     tags: ['HTML', 'CSS', 'JavaScript'],
@@ -164,8 +165,9 @@ export const projects = [
     repositoryUrl: '',
     en: {
       type: 'Clothing landing page',
+      status: 'In development',
       description:
-        'Campaign page for a fashion collection, with a bold identity, visual catalog and calls to purchase.',
+        'Campaign page for a fashion collection, with a bold identity, visual catalog and calls to purchase. Evolving into a web store with a back end.',
       imageAlt: 'Hero of the FRS Wear landing page with a clothing store in the background',
     },
   },
