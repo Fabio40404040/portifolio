@@ -6,7 +6,7 @@ export default defineConfig(({ mode }) => {
   // de compartilhamento do LinkedIn/WhatsApp. Se mudar de domínio, troque o
   // endereço abaixo ou defina VITE_SITE_URL na hospedagem.
   const env = loadEnv(mode, process.cwd(), '');
-  const siteUrl = (env.VITE_SITE_URL || 'https://portifolio-e9b.pages.dev').replace(/\/$/, '');
+  const siteUrl = (env.VITE_SITE_URL || 'https://fabioribeirodev.com.br').replace(/\/$/, '');
 
   return {
     // Caminho absoluto (raiz do domínio) — é assim que Vercel/Netlify
