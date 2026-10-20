@@ -19,25 +19,25 @@ export const projects = [
   //Sites quantidade (04)
   {
     id: 'fbi-nutrition',
-    hidden: true, // aparece no site quando tiver imagem e link (demoUrl)
     title: 'FBI Nutrition',
     type: 'E-commerce de suplementos',
-    description:'Loja virtual responsiva para apresentar suplementos, destacar ofertas e facilitar a jornada de compra.',
+    description:
+      'Loja virtual completa com cadastro e login, carrinho, favoritos, pagamento, histórico de pedidos e recuperação de senha por e-mail.',
     category: 'site',
     year: '2026',
-    tags: ['HTML', 'CSS', 'JavaScript'],
+    tags: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Express.js', 'PostgreSQL', 'Supabase', 'Resend', 'Vercel', 'Render'],
     image: '/images/projects/ecommerce-suplementos-hero.webp',
     imageAlt: 'Página inicial da loja FBI Nutrition com suplementos esportivos',
     imageFit: 'contain',
     imagePosition: 'center',
     visual: 'finance',
     featured: true,
-    demoUrl: '',
+    demoUrl: 'https://loja-suplementos-alpha.vercel.app/',
     repositoryUrl: '',
     en: {
       type: 'Supplement e-commerce',
       description:
-        'Responsive online store to showcase supplements, highlight deals and make the buying journey easier.',
+        'Full online store with sign-up and login, cart, favorites, checkout, order history and password recovery by email.',
       imageAlt: 'Home page of the FBI Nutrition store with sports supplements',
     },
   },

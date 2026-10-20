@@ -2,8 +2,9 @@ import { lang, localize } from '../i18n.js'
 
 const skillGroups = [
   { group: 'Front-end', items: ['HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'React'] },
-  { group: 'Back-end', items: ['Node.js', 'Express.js', 'REST API'] },
-  { group: 'Banco de dados', items: ['PostgreSQL', 'Prisma'], en: { group: 'Database' } },
+  { group: 'Back-end', items: ['Node.js', 'Express.js', 'REST API', 'Cloudflare Workers'] },
+  { group: 'Banco de dados', items: ['PostgreSQL', 'Supabase', 'Cloudflare D1', 'SQL', 'Prisma'], en: { group: 'Database' } },
+  { group: 'Nuvem e deploy', items: ['Cloudflare R2', 'Vercel', 'Render'], en: { group: 'Cloud & deploy' } },
   { group: 'Inteligência Artificial', items: ['Integração com IA'], en: { group: 'Artificial Intelligence' } },
   { group: 'Versionamento', items: ['Git', 'GitHub'], en: { group: 'Version control' } },
 ]
@@ -28,6 +29,13 @@ const skillIcons = {
   'REST API': '/icons/skills/openapiinitiative.svg',
   PostgreSQL: '/icons/skills/postgresql.svg',
   Prisma: '/icons/skills/prisma.svg',
+  'Cloudflare Workers': '/icons/skills/cloudflareworkers.svg',
+  'Cloudflare D1': '/icons/skills/cloudflare.svg',
+  'Cloudflare R2': '/icons/skills/cloudflare.svg',
+  Supabase: '/icons/skills/supabase.svg',
+  SQL: '/icons/skills/sql.svg',
+  Vercel: '/icons/skills/vercel.svg',
+  Render: '/icons/skills/render.svg',
   'Integração com IA': '/icons/skills/ai.svg',
   Git: '/icons/skills/git.svg',
   GitHub: '/icons/skills/github.svg',
