@@ -3,10 +3,10 @@ import { defineConfig, loadEnv } from 'vite';
 
 export default defineConfig(({ mode }) => {
   // Endereço público do portfólio (ex.: https://fabio.dev), usado na imagem
-  // de compartilhamento do LinkedIn/WhatsApp. Defina VITE_SITE_URL no arquivo
-  // .env ou nas variáveis de ambiente da hospedagem (Cloudflare/Vercel/Netlify).
+  // de compartilhamento do LinkedIn/WhatsApp. Se mudar de domínio, troque o
+  // endereço abaixo ou defina VITE_SITE_URL na hospedagem.
   const env = loadEnv(mode, process.cwd(), '');
-  const siteUrl = (env.VITE_SITE_URL || '').replace(/\/$/, '');
+  const siteUrl = (env.VITE_SITE_URL || 'https://portifolio-e9b.pages.dev').replace(/\/$/, '');
 
   return {
     // Caminho absoluto (raiz do domínio) — é assim que Vercel/Netlify
